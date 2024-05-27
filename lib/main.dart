@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final TextEditingController searchController = TextEditingController();
-  List<String> products = ["mobiles", 'Camera', 'Laptop', 'Laptop Bag'];
+  List<String> products = ["Gopika", 'sapna', 'shana', 'Rasna '];
   List<String> filteredProducts = [];
 
   @override
@@ -34,6 +34,7 @@ class _MyAppState extends State<MyApp> {
               height: 60,
             ),
             Padding(
+          
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Container(
                 decoration: const BoxDecoration(
@@ -43,7 +44,7 @@ class _MyAppState extends State<MyApp> {
                   color: Color.fromARGB(255, 213, 210, 210),
                 ),
                 child: TextField(
-                  onChanged: _filtterProducts,
+                  onChanged: edmoneserarch,
                   controller: searchController,
                   decoration: const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
@@ -71,7 +72,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  _filtterProducts(String value) {
+  edmoneserarch(String value) {
     setState(() {
       filteredProducts = products
           .where((elements) =>
